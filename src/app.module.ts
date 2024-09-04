@@ -4,6 +4,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserEntity } from './entity/user-entity.entity';
+import { AuthModule } from './auth/auth.module';
 
 
 @Module({
@@ -21,7 +22,7 @@ import { UserEntity } from './entity/user-entity.entity';
       database: 'sua_base_de_dados',
       entities: [UserEntity], // Entidades gerenciadas pelo TypeORM
       synchronize: true, // Sincroniza automaticamente as entidades com o banco de dados (somente para desenvolvimento)
-    }),UsersModule
+    }),UsersModule, AuthModule
 
   ],
   controllers: [],

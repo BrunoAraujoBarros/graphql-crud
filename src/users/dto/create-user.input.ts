@@ -11,4 +11,7 @@ export class CreateUserInput extends OmitType(User, ['id', 'updatedAt', 'created
 
   @Field(() => String)
   UserId: string;  // Adicione este campo
+
+  @Field(() => String)
+  Password: string;
 }

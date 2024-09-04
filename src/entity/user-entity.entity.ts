@@ -19,4 +19,7 @@ export class UserEntity{
   
     @Column()
     updatedAt: Date;
+
+    @Column()
+    Password: string
   }

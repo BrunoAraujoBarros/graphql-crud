@@ -19,4 +19,7 @@ export class User {
 
   @Field(() => Date)
   updatedAt: Date;
+
+  @Field(() => String)
+  Password: string;
 }
