@@ -46,6 +46,6 @@ export class UsersResolver {
   @Mutation(() => User, {name: 'removeUsers'})
   @UseGuards(GqlAuthGuard)
   async remove(@Args('id', { type: () => ID }) id: string) {
-    return this.usersService.remove(id);
+  this.usersService.remove(id);
   }
 }

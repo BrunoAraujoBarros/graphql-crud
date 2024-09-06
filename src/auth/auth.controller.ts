@@ -11,7 +11,8 @@ export class AuthController {
     @Body('UserId') UserId: string,
     @Body('password') password: string,
   ){
-    await this.authService.signIn(UserId, password);
+    const { token, expiresIn } = await this.authService.signIn(UserId, password);
+    return { token, expiresIn }; // Certifique-se de retornar o token
   }
 }
 

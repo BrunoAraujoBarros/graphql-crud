@@ -21,8 +21,7 @@ export class UsersService {
     const user = this.usersRepository.create({
       name,
       url,
-      //Password: hashedPassword,
-      Password,
+      Password: hashedPassword,
       UserId,
       createdAt: new Date(),  
       updatedAt: new Date(),  
